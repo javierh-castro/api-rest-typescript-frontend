@@ -34,8 +34,10 @@ export async function getProducts() {
         const result = safeParse(ProductsSchema, data.data)
         if(result.success) {
             return result.output
-        }else {
-            throw new Error('Hubo un error...')
+       }else {
+            console.error('Problemas de validación:', result.issues);
+            throw new Error('Hubo un error al validar los datos.');
+            // throw new Error('Hubo un error...')
         }
     }catch (error) {
         console.log(error)
