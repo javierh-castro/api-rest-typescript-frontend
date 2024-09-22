@@ -45,7 +45,7 @@ function NewProducts() {
         <ProductForm />
         <input
           type="submit"
-          className="mt-5 w-full bg-indigo-600 p-2 text-white font-bold text-lg cursor-pointer rounded"
+          className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
           value="Registrar Producto"
         />
       </Form>

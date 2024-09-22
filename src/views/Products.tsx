@@ -20,27 +20,27 @@ function Products() {
 
   return (
     <>
-      <div className="flex justify-between">
-        <h2 className="text-4xl font-black text-slate-500 ">Productos</h2>
+      <div className="flex justify-between mb-5">
+        <h2 className="text-2xl xl:text-4xl font-black text-slate-500">Productos</h2>
         <Link
           to="productos/nuevo"
-          className="rounded-md bg-indigo-600 p-3 text-sm font-bold text-white shadow-sm hover:bg-indigo-500"
+          className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
         >
           Agregar Producto
         </Link>
       </div>
 
-      <div className="p-2">
-        <table className="w-full mt-5 table-auto">
-          <thead className="bg-slate-800 text-white">
-            <tr>
-              <th className="p-2">Producto</th>
-              <th className="p-2">Precio</th>
-              <th className="p-2">Disponibilidad</th>
-              <th className="p-2">Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
+      <div>
+        <table className="w-full border-collapse">
+        <thead className="bg-slate-800 text-white">
+          <tr>
+            <th className="hidden md:table-cell px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Nombre</th>
+            <th className="hidden md:table-cell px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Precio</th>
+            <th className="hidden md:table-cell px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Disponibilidad</th>
+            <th className="hidden md:table-cell px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Acciones</th>
+          </tr>
+        </thead>
+          <tbody className="bg-white divide-y divide-gray-200">
             {products.map(product => (
               <ProductDetails
               key = {product.id}
